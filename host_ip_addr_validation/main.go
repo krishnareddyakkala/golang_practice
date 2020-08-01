@@ -17,7 +17,7 @@ func main() {
 	//host := "http://10.218.9.169:8200/"
 	u, e := url.Parse(host)
 	if e != nil {
-		fmt.Println("Error: ", e.Error())
+		panic(fmt.Sprintf("Error: %s", e.Error()))
 	}
 	fmt.Println(u.Host, u.Hostname(), u.Port())
 
