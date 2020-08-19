@@ -19,7 +19,7 @@ func main() {
 	if e != nil {
 		panic(fmt.Sprintf("Error: %s", e.Error()))
 	}
-	fmt.Println(u.Host, u.Hostname(), u.Port())
+	fmt.Println(u.Host, u.Hostname(), u.Port(), u.String())
 
 	fmt.Println("validateVaultHost: ", validateVaultHost(u.Hostname()))
 	addr := net.ParseIP(u.Hostname())
