@@ -67,6 +67,7 @@ func isCertificateRevokedByOCSP(clientCert, issuerCert *x509.Certificate, ocspSe
 	httpRequest.Header.Add("host", ocspUrl.Host)
 	httpClient := &http.Client{}
 	httpResponse, err := httpClient.Do(httpRequest)
+	fmt.Println("###########", httpResponse.StatusCode, httpResponse.Status)
 	if err != nil {
 		fmt.Printf("err: %s\n", err)
 		return false
